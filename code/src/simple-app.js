@@ -1,7 +1,5 @@
 const http = require('http');
 
-const AWS_ACCESS_KEY_ID = 'AKIA2T2SJH6MS337PDWL'
-
 const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
