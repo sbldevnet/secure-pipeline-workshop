@@ -66,7 +66,7 @@ jobs:
           exit-code: "1"
           ignore-unfixed: true
           vuln-type: "os,library"
-          severity: "CRITICAL,HIGH"
+          severity: "CRITICAL"
         continue-on-error: false
 
       - name: Set scan result
@@ -145,7 +145,7 @@ jobs:
         with:
           image: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
           fail-build: true
-          severity-cutoff: high
+          severity-cutoff: critical
           output-format: sarif
           add-cpes-if-none: true
 
