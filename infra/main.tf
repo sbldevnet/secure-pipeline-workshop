@@ -130,7 +130,7 @@ resource "aws_security_group" "ecs_tasks" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["192.168.0.0/24"]
   }
 
   # trivy:ignore:AVD-AWS-0104
@@ -139,7 +139,7 @@ resource "aws_security_group" "ecs_tasks" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["192.168.0.0/24"]
   }
 
   tags = {
